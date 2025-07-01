@@ -129,6 +129,10 @@ app.get('/', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Portfolio server running at http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Portfolio server running at http://0.0.0.0:${port}`);
+  console.log(`API endpoints available at:`);
+  console.log(`- GET http://0.0.0.0:${port}/api/profile`);
+  console.log(`- GET http://0.0.0.0:${port}/api/projects`);
+  console.log(`- GET http://0.0.0.0:${port}/api/skills`);
 });
